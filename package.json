@@ -1,0 +1,16 @@
+{
+  "name": "fcc-backend-url-shortener",
+  "version": "1.0.0",
+  "description": "Test task for FCC",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Dmitry Tenitskiy",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30"
+  }
+}
