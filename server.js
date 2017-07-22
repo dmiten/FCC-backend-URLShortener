@@ -36,7 +36,7 @@ mongo.MongoClient.connect(process.env.MONGOLAB_URI ||
 
   app.get("/", (req, res) => {
     res.sendFile(fileName, err => {
-      if (error) {
+      if (err) {
         console.log(err);
         res.status(err.status).end()
       } else {
