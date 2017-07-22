@@ -8,7 +8,8 @@ let server = require("express"),
     shortener = require("./shortener"),
 
     app = server(),
-    port = process.env.PORT || 8080;
+    port = process.env.PORT || 8080,
+    fileName = path.join(__dirname, "index.html");
 
 require('dotenv').config({
   silent: true
@@ -34,7 +35,6 @@ mongo.MongoClient.connect(process.env.MONGOLAB_URI ||
   });
 
   app.get("/", (req, res) => {
-    var fileName = path.join(__dirname, "index.html");
     res.sendFile(fileName, err => {
       if (error) {
         console.log(err);
